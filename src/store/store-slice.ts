@@ -46,7 +46,6 @@ const appSlice = createSlice({
       .addCase(fetchFilmByIdThunk.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        // Add the fetched single film to the films array
         state.films.push(action.payload);
       })
       .addCase(fetchFilmByIdThunk.rejected, (state, action) => {
@@ -73,7 +72,6 @@ const appSlice = createSlice({
       .addCase(fetchPersonByIdThunk.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        // Add the fetched single person to the people array
         state.people.push(action.payload);
       })
       .addCase(fetchPersonByIdThunk.rejected, (state, action) => {
@@ -100,7 +98,6 @@ const appSlice = createSlice({
       .addCase(fetchSpeciesByIdThunk.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        // Add the fetched single species to the species array
         state.species.push(action.payload);
       })
       .addCase(fetchSpeciesByIdThunk.rejected, (state, action) => {
