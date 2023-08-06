@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Typography, CircularProgress, Grid } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "src/store/hooks";
@@ -12,7 +12,7 @@ const PeoplePage = () => {
   const dispatch = useAppDispatch();
   const peopleList = useAppSelector(selectPeople);
   const peopleLoading = useAppSelector(selectLoading);
-  const itemsPerPage = 3; // Number of people to display per page
+  const itemsPerPage = 3;
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
